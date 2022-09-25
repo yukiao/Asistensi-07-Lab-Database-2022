@@ -1,4 +1,4 @@
--- create database db_praktikum;
+create database db_praktikum;
 use db_praktikum;
 
 create table if not exists buku (
