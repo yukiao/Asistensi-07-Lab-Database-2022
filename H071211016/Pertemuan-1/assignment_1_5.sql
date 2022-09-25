@@ -1,4 +1,4 @@
--- CREATE DATABASE db_praktikum;
+CREATE DATABASE db_praktikum;
 
 USE db_praktikum;
 
