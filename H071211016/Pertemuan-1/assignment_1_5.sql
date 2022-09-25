@@ -1,10 +1,10 @@
-CREATE DATABASE db_praktikum;
+-- CREATE DATABASE db_praktikum;
 
 USE db_praktikum;
 
 CREATE TABLE buku(
 	judul VARCHAR (255),
-	tahun_terbit INT,
+	`tahun terbit` INT,
 	pengarang VARCHAR (255),
 	id_buku INT AUTO_INCREMENT,
 	PRIMARY KEY (id_buku)
