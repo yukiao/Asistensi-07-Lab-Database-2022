@@ -1,0 +1,1 @@
+SELECT customernumber `nomor Customer`, customerName `nama Customer` FROM customers WHERE customernumber>=100 AND customernumber<=150
