@@ -71,3 +71,4 @@
 -- DELETE FROM orders WHERE status = "Cancelled";
 
 SELECT * FROM orders WHERE STATUS = "cancelled";
+ACTION
