@@ -1,0 +1,66 @@
+-- USE classicmodels
+-- 1
+-- select * FROM customers;
+-- SELECT * FROM orders;
+-- 
+-- SELECT c.customerName, c.creditLimit, o.`status`, o.comments
+-- FROM customers AS c
+-- JOIN orders AS o
+-- ON c.customerNumber = o.customerNumber
+-- WHERE o.`status` = 'On Hold' AND  comments LIKE '%credit limit%'
+
+-- SELECT *FROM orders WHERE comments LIKE '%credit limit%'
+
+
+--  2
+-- SELECT * FROM products;
+-- 
+-- SELECT c.customerName, o.`status`, o.comments
+-- FROM customers AS c
+-- JOIN orders AS o
+-- ON c.customerNumber = o.customerNumber
+-- WHERE o.comments LIKE '%dhl%';
+-- 
+-- -- 3
+-- SELECT * FROM customers;
+-- SELECT * FROM payments;
+-- SELECT * FROM products;
+-- SELECT * FROM orders;
+-- SELECT * FROM orderdetails;
+-- 
+-- SELECT customers.customerName, products.productName , orders.status, orders.shippedDate FROM customers
+-- INNER JOIN orders
+-- ON  customers.customerNumber = orders.customerNumber
+-- INNER JOIN orderdetails
+-- ON orders.orderNumber = orderdetails.orderNumber
+-- INNER JOIN products
+-- ON orderdetails.productCode = products.productCode
+-- WHERE  products.productName LIKE '%Ferrari%' ORDER BY orders.shippedDate DESC;
+
+-- 
+-- -- 4
+-- nomor 4
+-- memasukkan data baru pada kolom table orders
+-- INSERT INTO orders(orderNumber,status,orderDate,requiredDate,customerNumber)
+-- VALUES ('20000','In Process',current_date(),current_date() + INTERVAL 1 YEAR,'465');
+-- 
+-- SELECT * FROM orders WHERE customerNumber = "465";
+-- 
+-- -- memasukkan data baru pada table orderdetails
+-- SELECT * FROM products WHERE productName LIKE "%v8 coupe%";
+-- 
+-- INSERT INTO orderdetails
+-- VALUES ('20000','S18_2957','50','62.46','40');
+-- 
+-- SELECT * FROM orderdetails WHERE orderNumber = "20000" ;
+
+-- HASILNYA
+-- SELECT customers.customerNumber, customers.customerName, orders.status, orders.orderDate,orders.requiredDate,orderdetails.quantityOrdered,orderdetails.priceEach,products.MSRP,products.productName FROM customers
+-- INNER JOIN orders
+-- ON  customers.customerNumber = orders.customerNumber
+-- INNER JOIN orderdetails
+-- ON orders.orderNumber = orderdetails.orderNumber
+-- INNER JOIN products
+-- ON orderdetails.productCode = products.productCode
+-- WHERE  customers.customerNumber = '465';
+-- 
