@@ -1,6 +1,6 @@
 USE classicmodels;
 -- Nomor 1
-SELECT *FROM offices WHERE city ='San Francisco';
+SELECT * FROM offices WHERE city ='San Francisco';
 
 -- Nomor 2
 -- SELECT * FROM orderdetails WHERE quantityOrdered > 70 ORDER BY orderLineNumber ASC ;
