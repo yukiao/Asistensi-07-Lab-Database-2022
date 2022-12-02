@@ -58,7 +58,7 @@ order by (sum(od.quantityOrdered * od.priceEach)) - sum(od.quantityOrdered * p.b
 	GROUP BY o.officeCode
 	ORDER BY o.phone ASC;
 
-SELECT o.addressLine1 AS 'Alamat', concat(LEFT(o.phone, LENGTH(o.phone)-6), '* **') AS 'Nomor Telp',
+SELECT o.addressLine1 AS 'Alamat', concat(LEFT(o.phone, LENGTH(o.phone)-6), '* ****') AS 'Nomor Telp',
 COUNT(DISTINCT e.employeeNumber) AS 'jumlah karyawan' , COUNT(DISTINCT c.customerName), round(AVG(amount), 2)
 from offices AS o
 INNER JOIN employees AS e
