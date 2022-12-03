@@ -14,11 +14,11 @@
 -- WHERE productName='1940 Ford Pickup Truck' ORDER BY orderDate DESC;
 -- 
 -- Nomor 2
--- SELECT products.productName, orderdetails.priceEach, 0.8 * products.MSRP
--- FROM products
--- INNER JOIN orderdetails
--- ON products.productCode = orderdetails.productCode
--- WHERE orderdetails.priceEach < 0.8 * products.MSRP;appseminar
+SELECT products.productName, orderdetails.priceEach, 0.8 * products.MSRP
+FROM products
+INNER JOIN orderdetails
+ON products.productCode = orderdetails.productCode
+WHERE orderdetails.priceEach < 0.8 * products.MSRP;appseminar
 
 -- No 3
 -- USE appseminar;
