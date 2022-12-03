@@ -1,0 +1,96 @@
+-- USE db_praktikum;
+-- 
+-- ALTER TABLE mahasiswa
+-- ADD No_telp VARCHAR(20) NOT NULL;
+-- 
+-- ALTER TABLE mahasiswa
+-- ADD Alamat VARCHAR(100);
+-- 
+-- ALTER TABLE mahasiswa
+-- ADD Email VARCHAR(50) NOT NULL;
+-- 
+-- ALTER TABLE mahasiswa
+-- ADD Keterangan VARCHAR(20);
+-- 
+-- DELETE FROM pinjam WHERE id_buku='1';
+-- 
+-- -- Soal 3
+-- SELECT * FROM mahasiswa
+-- INSERT INTO mahasiswa (id_mahasiswa, nama, nim, jk, No_telp, Alamat, Email, Keterangan)
+-- VALUE (17, 'Muhammad Arya Ramdani', 'H071211052', 'L', '+1-729-333-2022', '71533 Lester Glen Apt. 239', 'bartell.dejuan@hotmail.com', NULL);
+-- 
+-- INSERT INTO mahasiswa (id_mahasiswa, nama, nim, jk, No_telp, Alamat, Email, Keterangan)
+-- VALUE (18, 'Aditya Fajar', 'H071211053', 'L', '1-447-680-1658', '55119 Vicky Land Suite 516', 'dashawn22@yahoo.com', NULL);
+-- 
+-- INSERT INTO mahasiswa (id_mahasiswa, nama, nim, jk, No_telp, Alamat, Email, Keterangan)
+-- VALUE (19, 'Aflah alifu.', 'H071211054', 'L', '858-329-4057 x5638', '912 Gutkowski Burgs', 'stanley.dibbert@mayer.biz', NULL);
+-- 
+-- INSERT INTO mahasiswa (id_mahasiswa, nama, nim, jk, No_telp, Alamat, Email, Keterangan)
+-- VALUE (20, 'Zabil sabri', 'H071211055', 'L', '539-205-4688', '4198 Lucy Mission Suite 083', 'jermain56@gibson.com', NULL);
+-- 
+-- INSERT INTO mahasiswa (id_mahasiswa, nama, nim, jk, No_telp, Alamat, Email, Keterangan)
+-- VALUE (21, 'Andi ibnu', 'H071211056', 'L', '(625) 674-6416 x3861', '453 Kutch Tunnel Suite 637', 'schultz.hailee@lind.info', NULL);
+-- 
+-- INSERT INTO mahasiswa (id_mahasiswa, nama, nim, jk, No_telp, Alamat, Email, Keterangan)
+-- VALUE (22, 'Hasan azyumardi', 'H071211057', 'L', '(361) 987-7017', '89304 Caitlyn Coves Apt. 608', 'sherwood14@harber.com', NULL);
+-- 
+-- INSERT INTO mahasiswa (id_mahasiswa, nama, nim, jk, No_telp, Alamat, Email, Keterangan)
+-- VALUE (23, 'Nanda,'H071211023', 'P', '+1.916.497.6876', '3922 Carole Circles Suite 521', 'whuels@gmail.com', NULL);
+-- 
+-- INSERT INTO mahasiswa (id_mahasiswa, nama, nim, jk, No_telp, Alamat, Email, Keterangan)
+-- VALUE (24, 'indah kurnia', 'H071211003', 'P', '1-540-283-0322 x59227', '846 Hazel Avenue', 'norris.lockman@hotmail.com', NULL);
+-- 
+-- INSERT INTO mahasiswa (id_mahasiswa, nama, nim, jk, No_telp, Alamat, Email, Keterangan)
+-- VALUE (25, 'Bulqis ramadani', 'H071211078', 'p', '+1-470-544-6505', '10979 Goldner Stravenue Apt. 152', 'gtreutel@runte.com', NULL);
+-- 
+-- INSERT INTO mahasiswa (id_mahasiswa, nama, nim, jk, No_telp, Alamat, Email, Keterangan)
+-- VALUE (26, 'Emilia', 'H071211073', 'P', '1-279-410-5926 x725', '53737 Barton Forks', 'garland01@hotmail.com', NULL);
+
+
+-- Soal 4
+-- SELECT * FROM buku;
+
+-- 
+-- INSERT INTO buku
+-- VALUE ('001', 'One Piece', '1936', 'Dr. Darrick Kuhn');
+-- 
+-- INSERT INTO buku
+-- VALUE ('002', 'Tenggelamnya kapal feri', '1922', 'Mylene Gusikowski');
+-- 
+-- INSERT INTO buku
+-- VALUE ('003', 'Kisah Nabi', '1956', 'Prof. Ryann Barton III');
+-- 
+-- INSERT INTO buku
+-- VALUE ('004', 'Tutorial Memasak', '1969', 'Louisa Johnston');
+-- 
+-- INSERT INTO buku
+-- VALUE ('005', 'Tutorial Ngoding', '1944', 'Jerrell Mayer');
+-- 
+-- SELECT * FROM pinjam;
+-- INSERT INTO pinjam
+-- VALUE ('006', '2023-01-20', '17', '001', '1');
+-- 
+-- INSERT INTO pinjam
+-- VALUE ('007', '2023-02-28', '18', '002', '1');
+-- 
+-- INSERT INTO pinjam
+-- VALUE ('008', '2023-03-07', '19', '003', '0');
+-- 
+-- INSERT INTO pinjam
+-- VALUE ('009', '2023-04-15', '20', '004', '1');
+-- 
+-- INSERT INTO pinjam
+-- VALUE ('010', '2023-05-19', '21', '005', '0');
+-- -- 
+-- -- Soal 5
+-- SELECT * FROM mahasiswa;
+-- INSERT INTO mahasiswa
+-- VALUE (10,'sony', 'H071211001','L','0812344','BTP','sony@gmail.com','5');
+-- INSERT INTO mahasiswa
+-- VALUE (98, '', 'H071211098', 'P', '(207) 846-7653', '812 Fay Roads Apt. 052', 'sunny.rath@hotmail.com', NULL);
+-- UPDATE mahasiswa
+-- SET Alamat = NULL
+-- WHERE id_mahasiswa = 99
+-- INSERT INTO mahasiswa
+-- VALUE (99, 'Jeki Si pejuang', 'Null', 'L', '1-224-616-1963 x21337', '6847 Yost Roads', 'charlene.kreiger@hotmail.com', NULL);
+-- 
