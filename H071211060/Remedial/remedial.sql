@@ -2,7 +2,6 @@ USE sakila;
 
 -- Nama : Andi Muh. Ibnu Hibban Bagoes Malolo
 -- NIM : H071211060
-
 -- nomor 1
 -- Berikan film yang paling banyak dirental oleh customer dari negara amerika
 SELECT CONCAT(customer.first_name," ",customer.last_name) "Nama Lengkap Pelanggan"
