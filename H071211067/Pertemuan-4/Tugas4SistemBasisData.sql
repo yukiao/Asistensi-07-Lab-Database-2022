@@ -1,0 +1,79 @@
+-- No. 1
+-- SELECT orders.orderDate
+-- FROM orders
+-- INNER JOIN orderdetails 
+-- ON orders.orderNumber = orderdetails.orderNumber
+-- INNER JOIN products 
+-- ON orderdetails.productCode = products.productCode 
+-- WHERE products.productName = "1940 Ford Pickup Truck" 
+-- ORDER BY orderDate desc
+
+-- No.2
+-- SELECT p.productName, od.priceEach, p.MSRP
+-- FROM products p
+-- INNER JOIN orderdetails od
+-- USING (productCode)
+-- ON p.productCode = od.productCode
+-- WHERE priceEach < p.MSRP * 0.8;
+
+-- No. 3
+-- SELECT ss_dosen.nama, ss_mahasiswa.nama
+-- FROM ss_dosen
+-- INNER JOIN ss_pembimbing
+-- ON ss_dosen.id_dosen = ss_pembimbing.id_pembimbing_utama
+-- INNER JOIN ss_mahasiswa
+-- ON ss_pembimbing.id_mahasiswa = ss_mahasiswa.id_mahasiswa
+-- WHERE ss_mahasiswa.nama = 'Sulaeman'
+-- 
+-- No. 4
+-- Chapter 1
+-- ALTER TABLE customers ADD status VARCHAR (100);
+
+-- Chapter 2
+-- UPDATE customers
+-- INNER JOIN payments
+-- ON customers.customerNumber = payments.customerNumber
+-- INNER JOIN orders
+-- ON customers.customerNumber = orders.customerNumber
+-- INNER JOIN orderdetails
+-- ON orders.orderNumber = orderdetails.orderNumber
+-- Set customers.Status = 'VIP'
+-- WHERE payments.amount > 100000 or orderdetails.quantityOrdered > 50;
+-- SELECT * FROM customers
+
+-- Chapter 3
+-- UPDATE customers
+-- SET customers.Status = 'Regular'
+-- WHERE customers.Status is NULL;
+
+-- No. 5
+-- ALTER TABLE orderdetails
+-- DROP CONSTRAINT orderdetails_ibfk_1;
+-- 
+-- ALTER TABLE orderdetails
+-- ADD CONSTRAINT orderdetails_ibfk_1 FOREIGN KEY(OrderNumber) REFERENCES orders(orderNumber)
+-- ON DELETE CASCADE ON UPDATE CASCADE;
+-- 
+-- ALTER TABLE orders
+-- DROP CONSTRAINT orders_ibfk_1;
+-- 
+-- ALTER TABLE orders
+-- ADD CONSTRAINT orders_ibfk_1 FOREIGN KEY(customerNumber) REFERENCES customers(customerNumber)
+-- ON DELETE CASCADE ON UPDATE CASCADE;
+-- 
+-- ALTER TABLE payments
+-- DROP CONSTRAINT payments_ibfk_1;
+-- 
+-- ALTER TABLE Payments
+-- ADD CONSTRAINT payments_ibfk_1 FOREIGN KEY(customerNumber) REFERENCES customers(customerNumber)
+-- ON DELETE CASCADE ON UPDATE CASCADE;
+-- 
+-- DELETE customers, orders, orderdetails
+-- FROM customers
+-- INNER JOIN orders
+-- ON customers.customerNumber = orders.customerNumber
+-- INNER JOIN orderdetails
+-- ON orders.orderNumber = orderdetails.orderNumber
+-- INNER JOIN payments
+-- ON customers.customerNumber = payments.customerNumber
+-- WHERE orders.status = 'Cancelled';
